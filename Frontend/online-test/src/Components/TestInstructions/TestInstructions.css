@@ -1,0 +1,31 @@
+.instructions-container{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.instructions{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.start-test-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.start-test-btn:hover{
+    transform: scale(1.1);
+}

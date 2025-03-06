@@ -9,16 +9,12 @@ const cors = require("cors")
 const dotenv = require("dotenv")
 dotenv.config()
 
-const secretKey = crypto.randomBytes(32).toString("hex")
-console.log(secretKey)
-
 const port = process.env.PORT || 5000
 
 app.use(cors())
 app.use(express.json())
-app.use(authMiddleware)
+app.use("/api/view", authMiddleware, testRoute)
 app.use("/api/auth", studentRoute)
-app.use("/api/view", testRoute)
 
 mongoose.connect(process.env.URI)
 .then(() => {
